@@ -1,0 +1,9 @@
+{
+	"name"        : "Robots.txt",
+	"description" : "Customize robots.txt for your application",
+	"author"      : "Mior Muhammad Zaki",
+	"url"         : "https://github.com/orchestral/robotix",
+	"version"     : "0.1.0",
+	"config"      : {},
+	"require"     : {}
+}
