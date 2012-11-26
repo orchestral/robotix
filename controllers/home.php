@@ -13,6 +13,14 @@ class Robotix_Home_Controller extends Controller {
 	public $restful = true;
 
 	/**
+	 * Apply filters during construct
+	 */
+	public function __construct()
+	{
+		$this->filter('before', 'orchestra::manage');
+	}
+
+	/**
 	 * Show a list of robots.txt
 	 *
 	 * @access public
