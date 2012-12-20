@@ -2,7 +2,7 @@
 
 Bundle::start('orchestra');
 
-class RobotixTest extends Orchestra\Testable\TestCase 
+class HomeTest extends Orchestra\Testable\TestCase 
 {
 	/**
 	 * User instance.
