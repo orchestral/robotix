@@ -1,0 +1,18 @@
+language: php
+
+php:
+  - "5.4"
+  - "5.3"
+
+notifications:
+  irc: "irc.freenode.net#orchestra-platform"
+
+before_install:
+  - cd ~/builds
+  - git clone git://github.com/laravel/laravel.git
+  - mv ./orchestral/robotix ./laravel/bundles/robotix
+  - cd ./laravel
+  - php artisan bundle:install orchestra
+  - echo "<?php return array('orchestra' => array('auto' => true, 'handles' => 'orchestra'), 'robotix');" > ./application/bundles.php
+
+script: "php artisan test robotix"

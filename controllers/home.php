@@ -33,7 +33,7 @@ class Robotix_Home_Controller extends Controller {
 	 */
 	public function get_index()
 	{
-		$memory = Orchestra\Core::memory();
+		$memory = Orchestra::memory();
 		$robots = $memory->get('site.robots-txt', '');
 
 		View::share('_title_', 'Robots.txt');
@@ -54,22 +54,22 @@ class Robotix_Home_Controller extends Controller {
 			'robots' => 'required',
 		);
 
-		$m = new Messages;
-		$v = Validator::make($input, $rules);
+		$msg = new Messages;
+		$val = Validator::make($input, $rules);
 
-		if ($v->fails())
+		if ($val->fails())
 		{
 			return Redirect::to(handles('orchestra::resources/robotix'))
 				->with_input()
-				->with_errors($v);
+				->with_errors($val);
 		}
 
-		$memory = Orchestra\Core::memory();
+		$memory = Orchestra::memory();
 		$memory->put('site.robots-txt', $input['robots']);
 
-		$m->add('success', __('robotix::response.update'));
+		$msg->add('success', __('robotix::response.update'));
 
 		return Redirect::to(handles('orchestra::resources/robotix'))
-			->with('message', $m->serialize());
+			->with('message', $msg->serialize());
 	}
 }

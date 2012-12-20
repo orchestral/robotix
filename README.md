@@ -3,6 +3,8 @@ Robots.txt for Orchestra Platform
 
 A simple extension for managing robots.txt for your Orchestra Platform.
 
+[![Build Status](https://secure.travis-ci.org/orchestral/robotix.png?branch=master)](http://travis-ci.org/orchestral/robotix)
+
 ## Installation
 
 ### Installation with Laravel Artisan

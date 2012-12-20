@@ -9,7 +9,7 @@
 |
 */
 
-Event::listen('orchestra.started', function ()
+Event::listen('orchestra.started: backend', function ()
 {
 	$robots = Orchestra\Resources::make('robotix', array(
 		'name' => 'Robots.txt',
