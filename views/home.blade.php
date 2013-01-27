@@ -5,7 +5,6 @@
 {{ Form::open(handles('orchestra::resources/robotix'), 'POST') }}
 
 	<div class="control-group {{ $errors->has('robots') ? 'error' : '' }}">
-		{{ Form::label('robots', 'Robots.txt', array('class' => 'control-label')) }}
 		<div class="controls">
 			{{ Form::textarea('robots', $robots, array('class' => 'span12')) }}
 			{{ $errors->first('robots', '<p class="help-block">:message</p>') }}
