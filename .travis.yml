@@ -15,4 +15,4 @@ before_install:
   - php artisan bundle:install orchestra
   - echo "<?php return array('orchestra' => array('auto' => true, 'handles' => 'orchestra'), 'robotix');" > ./application/bundles.php
 
-script: "php artisan test robotix"
+script: "phpunit --coverage-text --configuration bundles/robotix/phpunit.xml"
