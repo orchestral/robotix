@@ -1,6 +1,7 @@
 <?php
 
 use Orchestra\Messages,
+	Orchestra\Site,
 	Orchestra\View;
 
 class Robotix_Home_Controller extends Controller {
@@ -36,7 +37,7 @@ class Robotix_Home_Controller extends Controller {
 		$memory = Orchestra::memory();
 		$robots = $memory->get('site.robots-txt', '');
 
-		View::share('_title_', 'Robots.txt');
+		Site::set('title', 'Robots.txt');
 
 		return View::make('robotix::home', compact('robots'));
 	}
