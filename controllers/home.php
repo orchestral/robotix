@@ -55,7 +55,7 @@ class Robotix_Home_Controller extends Controller {
 			'robots' => 'required',
 		);
 
-		$msg = new Messages;
+		$msg = Messages::make();
 		$val = Validator::make($input, $rules);
 
 		if ($val->fails())
