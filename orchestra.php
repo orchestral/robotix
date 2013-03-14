@@ -12,7 +12,11 @@
 Event::listen('orchestra.started: backend', function ()
 {
 	$robots = Orchestra\Resources::make('robotix', array(
-		'name' => 'Robots.txt',
-		'uses' => 'robotix::home',
+		'name'    => 'Robots.txt',
+		'uses'    => 'robotix::home',
+		'visible' => function ()
+		{
+			return (Orchestra::acl()->can('manage orchestra'));
+		},
 	));
 });
