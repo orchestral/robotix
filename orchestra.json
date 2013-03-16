@@ -3,7 +3,7 @@
 	"description" : "Customize robots.txt for your application",
 	"author"      : "Mior Muhammad Zaki",
 	"url"         : "https://github.com/orchestral/robotix",
-	"version"     : "1.0.0",
+	"version"     : "1.0.1",
 	"config"      : {},
 	"require"     : {}
 }
